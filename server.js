@@ -57,6 +57,31 @@ app.get("/user/:name", (req, res) => {
   });
   
 
+  app.post("/create/user",(req,res)=>{
+
+    const newUser={
+        name:req.body.name,
+        age:age.body.age
+    }
+
+    users.push(newUser);
+    res.status(201);
+    res.json(newUser);
+  });
+
+  app.get("/first-user",(req,res)=>{
+
+    res.status(200);
+    res.json(users[0]);
+  })
+
+  app.get("/3000",(req,res)=>{
+
+    res.status(200);
+    res.json("Hello World");
+  })
+
+
   app.listen(port,()=>{
 
     
