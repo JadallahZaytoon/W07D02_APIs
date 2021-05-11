@@ -9,3 +9,10 @@ const todos = [
  { todo: "Eat Breakfast", isCompleted: false }
 
 ];
+
+
+app.get("/todos",(req,res)=>{
+
+    res.status(200);
+    res.json(todos);
+});
