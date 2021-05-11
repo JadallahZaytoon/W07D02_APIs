@@ -1,6 +1,6 @@
 const express = require("express");
 const app=express();
-const port=3000;
+const port=5000;
 
 
 
@@ -15,4 +15,23 @@ app.get("/todos",(req,res)=>{
 
     res.status(200);
     res.json(todos);
+});
+
+app.post("/create/todo",(req,res)=>{
+
+    const newToDo={
+        todo:req.body.todo,
+        isCompleted:isCompleted.body.isCompleted
+    }
+
+    todos.push(newToDo);
+    res.status(201);
+    res.json(newToDo);
+  });
+
+
+app.listen(port,()=>{
+
+    
+
 });
